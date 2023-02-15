@@ -1,0 +1,224 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SegundaEntrega",
+    "dateExported": "2023-02-15T01:38:24.671Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "58d1ee75-2e5e-4b1e-9db1-ada0ad33a8d3",
+            "name": "Productos",
+            "containerId": "",
+            "created": "2023-02-14T23:42:44.252Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "485fd1b0-eede-4e0e-8516-a409e07b36e2",
+            "name": "ProductCart",
+            "containerId": "",
+            "created": "2023-02-14T23:42:44.253Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "baa7e01a-e13d-4418-b15e-a21b8f7a9139",
+            "name": "Carrito",
+            "containerId": "",
+            "created": "2023-02-14T23:42:44.254Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d08bbed1-dd71-4c61-ae7a-be058a443fa5",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "58d1ee75-2e5e-4b1e-9db1-ada0ad33a8d3",
+            "name": "Ver todos los productos",
+            "url": "http://localhost:8080/productos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-14T23:42:44.252Z",
+            "modified": "2023-02-14T23:42:44.252Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "604c7996-a3a2-4e6d-89db-73197da3e331",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "58d1ee75-2e5e-4b1e-9db1-ada0ad33a8d3",
+            "name": "Buscar producto por id",
+            "url": "http://localhost:8080/productos/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-02-14T23:42:44.253Z",
+            "modified": "2023-02-15T00:28:18.251Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9e03f6b8-aeac-46ad-82f8-9d45dabad2d6",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "58d1ee75-2e5e-4b1e-9db1-ada0ad33a8d3",
+            "name": "Crear producto",
+            "url": "http://localhost:8080/productos",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-02-14T23:42:44.254Z",
+            "modified": "2023-02-14T23:42:44.254Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"CocaCola\",\n    \"description\": \"Bebida\",\n    \"price\": 300,\n    \"thumbnail\": \"urlCocaCola\",\n    \"code\": 10,\n    \"stock\": 2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8844e40-0479-4fa8-95c1-745f9fc591de",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "58d1ee75-2e5e-4b1e-9db1-ada0ad33a8d3",
+            "name": "Actualizar por id",
+            "url": "http://localhost:8080/productos/",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-02-14T23:42:44.255Z",
+            "modified": "2023-02-14T23:42:44.255Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c419033f-3858-443d-9f68-4b387decf724",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "58d1ee75-2e5e-4b1e-9db1-ada0ad33a8d3",
+            "name": "Elimar producto por id",
+            "url": "http://localhost:8080/productos/",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-02-14T23:42:44.256Z",
+            "modified": "2023-02-14T23:42:44.256Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "08960696-ea91-4398-9b69-045f27331a22",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "485fd1b0-eede-4e0e-8516-a409e07b36e2",
+            "name": "/",
+            "url": "http://localhost:8080/cart",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-02-14T23:42:44.257Z",
+            "modified": "2023-02-14T23:42:44.257Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "498a21ac-3820-44db-91e1-30130f06f3f9",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "485fd1b0-eede-4e0e-8516-a409e07b36e2",
+            "name": "post/",
+            "url": "http://localhost:8080/cart",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-02-14T23:42:44.258Z",
+            "modified": "2023-02-15T00:42:12.508Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"producto\": \"Mouse logitech\",\n    \"quantity\": \"5\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e848d7ea-7ec1-4462-8f8d-0e92d39a59ed",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "baa7e01a-e13d-4418-b15e-a21b8f7a9139",
+            "name": "Ver Todos los carritos",
+            "url": "http://localhost:8080/carrito",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-02-14T23:42:44.259Z",
+            "modified": "2023-02-15T00:08:21.315Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cfe48903-797f-496a-9305-2bc2bb3dd789",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "baa7e01a-e13d-4418-b15e-a21b8f7a9139",
+            "name": "buscar carrito id",
+            "url": "http://localhost:8080/carrito/63ec285a08bdd5402d417672",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2023-02-15T00:08:58.088Z",
+            "modified": "2023-02-15T00:37:37.623Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dc7c9427-c5c8-49d7-9cc3-1b26fb2f109e",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "baa7e01a-e13d-4418-b15e-a21b8f7a9139",
+            "name": "Crear Carrito",
+            "url": "http://localhost:8080/carrito",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-02-14T23:42:44.260Z",
+            "modified": "2023-02-14T23:42:44.260Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5da492c3-9209-46ae-9b0d-c473c77240a9",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "baa7e01a-e13d-4418-b15e-a21b8f7a9139",
+            "name": "Meter en objetos en el carrito",
+            "url": "http://localhost:8080/carrito/carrito/63ec285a08bdd5402d417672/producto/63ec27497598c61c95d4bc9a",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-02-15T00:15:09.946Z",
+            "modified": "2023-02-15T01:31:30.321Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"articulos\": \"lays\",\n  \"quantity\": \"80\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "81d9d334-a948-414e-a7a0-106f020d7a61",
+            "colId": "0053260b-c4dc-4912-82ca-691ebc08f804",
+            "containerId": "baa7e01a-e13d-4418-b15e-a21b8f7a9139",
+            "name": "Eliminar objetos en el carrito",
+            "url": "http://localhost:8080/carrito/eliminarproducto/carrito/63ec285a08bdd5402d417672/producto/63ec2a64f809a57318bd7fce",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2023-02-15T00:49:55.303Z",
+            "modified": "2023-02-15T01:32:08.613Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \n  \"articulos\": \"lays\",\n  \"quantity\": \"80\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
