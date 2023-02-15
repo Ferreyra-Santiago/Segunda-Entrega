@@ -64,10 +64,14 @@ carrito.put(
     const id_producto = req.params.idproducto;
 
     //seleccionamos al carrito
-    const carrito = await cartModel.findOne({ _id: id_Cart });    
+    const carrito = await cartModel.findOne({ _id: id_Cart });  
+    
+    //filtra y trae todos los dinstintos productos que encuentre
     const productosActualizados = carrito.articulos.filter(
       (element) => element.IdProducto.toString() !== id_producto.toString()
     );
+
+    //Se transcribe la informacion y se deja el nuevo array con los que son distintos
     carrito.articulos = productosActualizados;
 console.log(productosActualizados)    
 
