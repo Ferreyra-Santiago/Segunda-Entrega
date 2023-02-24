@@ -43,14 +43,5 @@
     "thumbnail": "url3D",
     "code": 14,
     "stock": 2
-  },
-  {
-    "id": 6,
-    "title": "Block",
-    "description": "Chocolate",
-    "price": 400,
-    "thumbnail": "urlBlock",
-    "code": 13,
-    "stock": 2
   }
 ]
