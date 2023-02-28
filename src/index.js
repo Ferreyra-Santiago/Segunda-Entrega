@@ -45,31 +45,32 @@ socketServer.on("connection", async (socket) => {
   console.log("nuevo cliente");
 
   // Almacenar los "productos" desde MongoDB en una variable
-  const products = await productModel.find().lean();
-
+  const products = await productModel.find();
+  console.log(products)
   // Socket VISUALIZAR productos en tiempo real
   socket.emit("cargaDeProductos", products);
 
   // Socket AGREGAR nuevo producto
   socket.on("nuevoProducto", async (data) => {
-    let productoNuevo = { ...data };
-    if (productoNuevo) {
-      await productModel.create(productoNuevo);
-    }
+    await productModel.create(data);
+    const actualizados = await productModel.find();
+      socket.emit("cargaDeProductos", actualizados);
+    
   });
 
   // Socket ELIMINAR producto con ID de FORM
   socket.on("eliminarProducto", async (id) => {
     if (id) {
       await productModel.deleteOne({ _id: id });
+      const actualizados = await productModel.find();
+      socket.emit("cargaDeProductos", actualizados);
       // res.send(`Producto "${id}" eliminado`);
     } else {
       // res.status(404).send("El producto no existe");
     }
   });
 
-  // Socket ACTUALIZAR productos
-  socket.on("cargaDeProductos", (products) => {});
+
 });
 
 // Conexion a MongoDB
