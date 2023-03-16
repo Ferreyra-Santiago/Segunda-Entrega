@@ -1,6 +1,6 @@
 const express = require("express");
 const viewsRouters = express.Router();
-const { productModel } = require("../models/products.model");
+const { productModel } = require("../models/user.model");
 
 viewsRouters.get("/", async (req, res) => {
   const products = await productModel.find().lean();
